@@ -22,11 +22,11 @@ def load_data(file,geojson):
   mex = requests.get(geojson).json()
   return df,geojson
 
-df,mex=load_data("/content/IDEFC_NM_sep23.csv","https://raw.githubusercontent.com/jeaggo/datasets/master/states_mexico.geojson")
+df,mex=load_data("IDEFC_NM_sep23.csv","https://raw.githubusercontent.com/jeaggo/datasets/master/states_mexico.geojson")
 
-familia = Image.open(r'/content/familia.jpg')
-violencia_familiar = Image.open(r'/content/violencia-familiar.jpg')
-logo=Image.open(r'/content/Yosu logo png.png')
+familia = Image.open(r'familia.jpg')
+violencia_familiar = Image.open(r'violencia-familiar.jpg')
+logo=Image.open(r'Yosu logo png.png')
 
 #Sustituimos los valores nulos por 0
 df.fillna(0, inplace=True)
